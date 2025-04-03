@@ -15,7 +15,7 @@ const login = () => {
       await AuthLogin(email, password);
       console.log("Login successful!");
     } catch (error) {
-      setError("Login failed. Please check your credentials.");
+      setError("Invalid email or password.");
       console.error(error);
     }
   };

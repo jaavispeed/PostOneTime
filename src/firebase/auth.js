@@ -15,3 +15,23 @@ export const AuthLogin = async (email, password) => {
     }
   };
 
+  // Función para registrar un nuevo usuario
+export const register = async (email, password) => {
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      return userCredential.user;
+    } catch (error) {
+      console.error("Error en registro:", error.message);
+      throw error;
+    }
+  };
+  
+  // Función para cerrar sesión
+  export const logout = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.error("Error al cerrar sesión:", error.message);
+      throw error;
+    }
+  };
