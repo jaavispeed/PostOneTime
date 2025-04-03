@@ -4,7 +4,7 @@ import Register from "./components/register/register.jsx"
 function App() {
 
   return (
-    <div>
+    <div className="w-full">
       <Login/>
       
       {/* <Register/> */}
