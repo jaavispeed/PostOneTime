@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import { AuthLogin } from "/src/firebase/auth.js";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 
 const login = () => {
@@ -9,6 +9,9 @@ const login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const navigate = useNavigate(); // ✅ Inicializar navigate
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,6 +19,7 @@ const login = () => {
     try {
       await AuthLogin(email, password);
       console.log("Login successful!");
+      navigate("/home"); // ✅ Redirigir correctamente
     } catch (error) {
       setError("Invalid email or password.");
       console.error(error);

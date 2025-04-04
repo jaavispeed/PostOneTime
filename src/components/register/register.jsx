@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import { AuthRegister } from "/src/firebase/auth.js";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 
 const register = () => {
@@ -9,12 +9,14 @@ const register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       await AuthRegister(email, password);
+      navigate("/login");
       console.log("register successful!");
     } catch (error) {
       setError("Invalid email or password.");
@@ -61,7 +63,7 @@ const register = () => {
             Registrarme
           </button>
           <p>
-            Ya tienes cuenta? <Link to="/register" className="text-blue-700 font-bold hover:underline">Iniciar sesion</Link>
+            Ya tienes cuenta? <Link to="/login" className="text-blue-700 font-bold hover:underline">Iniciar sesion</Link>
           </p>
         </form>
       </div>
