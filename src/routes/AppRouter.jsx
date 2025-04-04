@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router";
-import Login from "../components/login/login.jsx";
-import Register from "../components/register/register.jsx";
-import Home from "../components/home/home.jsx";
+import Login from "../components/login/Login.jsx";
+import Register from "../components/register/Register.jsx";
+import Home from "../components/home/Home.jsx";
 
 const AppRouter = () => {
     return (

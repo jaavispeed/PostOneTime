@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
-import { AuthRegister } from "/src/firebase/auth.js";
+import { AuthRegister } from "/src/firebase/Auth.js";
 import { Link, useNavigate } from "react-router";
 
 
-const register = () => {
+const Register = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -71,4 +71,4 @@ const register = () => {
   );
 };
 
-export default register
+export default Register

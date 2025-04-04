@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
-import { AuthLogin } from "/src/firebase/auth.js";
+import { AuthLogin } from "/src/firebase/Auth.js";
 import { Link, useNavigate } from "react-router";
 
 
-const login = () => {
+const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -74,4 +74,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

@@ -1,9 +1,8 @@
-import React from 'react'
 
-const home = () => {
+const Home = () => {
   return (
     <div>Estas logeado</div>
   )
 }
 
-export default home
+export default Home
