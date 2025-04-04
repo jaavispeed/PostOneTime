@@ -1,15 +1,11 @@
-import Login from "./components/login/login.jsx"
-import Register from "./components/register/register.jsx"
-
+import AppRouter from './routes/AppRouter.jsx'
 
 function App() {
 
   return (
-    <div className="w-full">
-      <Login/>
-      
-      {/* <Register/> */}
-    </div>
+    <>
+      <AppRouter/>
+    </>
   )
 }
 

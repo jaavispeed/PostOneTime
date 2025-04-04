@@ -59,6 +59,7 @@ const login = () => {
           >
             Login
           </button>
+          <p>No tienes cuenta? <span>Registrate</span></p>
         </form>
       </div>
     </div>
