@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from "react-router";
+import { Routes, Route, Navigate, useLocation } from "react-router";
 import Login from "../components/login/Login.jsx";
 import Register from "../components/register/Register.jsx";
 import Home from "../components/home/Home.jsx";
@@ -6,9 +6,14 @@ import Navbar from "../components/navbar/Navbar.jsx";
 import Post from "../components/post/Post.jsx";
 
 const AppRouter = () => {
+
+    const location = useLocation();
+    const noNavbarRoutes = ["/login", "/register"];
+
     return (
         <>
-        <Navbar />
+            {!noNavbarRoutes.includes(location.pathname) && <Navbar />}
+
             <Routes>
                 <Route path="/" element={<Navigate to="/login" />} />
                 <Route path="login" element={<Login />} />
