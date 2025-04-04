@@ -1,6 +1,6 @@
 
 import appFireBase from "./credentials";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
 
 const auth = getAuth(appFireBase)
 
@@ -16,7 +16,7 @@ export const AuthLogin = async (email, password) => {
   };
 
   // Función para registrar un nuevo usuario
-export const register = async (email, password) => {
+export const AuthRegister = async (email, password) => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       return userCredential.user;
