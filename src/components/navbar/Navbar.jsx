@@ -20,7 +20,7 @@ const Navbar = () => {
             <div className="container mx-auto flex justify-between items-center">
                 <Link to="/home" className="text-lg font-bold">Post One Time</Link>
                 <div className="space-x-4 flex items-center">
-                    <Link to="/about" className="hover:underline">Publicación</Link>
+                    <Link to="/post" className="hover:underline">Postear</Link>
                     <button
                         onClick={handleLogout}
                         className="flex items-center gap-2 bg-red-500 text-white py-2 px-4 rounded-lg shadow hover:bg-red-600 transition duration-200"
