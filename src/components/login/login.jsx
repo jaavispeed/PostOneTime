@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import { AuthLogin } from "/src/firebase/auth.js";
+import { Link } from "react-router";
+
 
 const login = () => {
 
@@ -59,7 +61,9 @@ const login = () => {
           >
             Login
           </button>
-          <p>No tienes cuenta? <span>Registrate</span></p>
+          <p>
+            No tienes cuenta? <Link to="/register" className="text-blue-700 font-bold hover:underline">Registrate</Link>
+          </p>
         </form>
       </div>
     </div>
